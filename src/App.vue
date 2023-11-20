@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <NavBar></NavBar>
+    <router-view></router-view>
+    <FooterComponent></FooterComponent>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavBar: defineAsyncComponent(() => import(/* webpackChunkName: "Navbar" */ '@/modules/shared/components/NavBar')),
+    FooterComponent: defineAsyncComponent(() => import(/* webpackChunkName: "Footer" */ '@/modules/shared/components/FooterComponent')),
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+/* Establece un z-index alto para el NavBar para que se muestre encima del contenido */
+#navBar {
+  z-index: 1000;
 }
+
+/* Agrega otros estilos según sea necesario */
 </style>

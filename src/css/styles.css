@@ -1,0 +1,38 @@
+body{
+    font-family: 'Roboto', sans-serif; /* Fuente de Google Fonts */
+}
+
+.button-warning{
+    background-color: #eadb0a;
+    color: #000000;
+}
+.button-succes{
+    background-color: #255A35 ;
+    color: white;
+}
+.button-danger{
+    background-color: #c80d0d;
+    color: white
+}
+.colorNav {
+    background-color: #ff0000;
+    /* background-color: #3E7347; */
+    width: 100%;
+    height: 120px;
+}
+.button-action{
+    background-color: #b06204 ;
+    color: white;
+}
+.redirecion{
+    color: #8B4513 ;
+}
+a{
+    color: #8B4513 ;  
+}
+
+.header-form{
+    background-color: #8B4513;
+    color: white;
+}
+
